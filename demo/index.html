@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>voice control</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--/////////////////////////////////////
+    -////////////*CSS*//////////////////////
+  <//////////////////////////////////////-->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.min.css" />
+  <!--/////////////////////////////////////
+    -////////////*JS*//////////////////////
+  <//////////////////////////////////////-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <!-- call my custom.js -->
+  <script>
+
+  var annyangScript = document.createElement('script');
+  if (/localhost/.exec(window.location)) {
+    annyangScript.src = "//localhost:8443/annyang.js"
+  }
+  else {
+    annyangScript.src = "//cdnjs.cloudflare.com/ajax/libs/annyang/2.2.1/annyang.min.js"
+  }
+  document.write(annyangScript.outerHTML)
+
+  </script>
+  </head>
+
+  <body>
+
+    <div class="jumbotron invisible"></div>
+    <div class="container">
+      <div class="well">
+        <div class="row text-center">
+           <div class="col-md-12">
+             <h1>Say something...</h1>
+           </div>
+        </div>
+        <div class="row">
+           <div class="col-md-2"></div>
+           <div class="col-md-6">
+             <h2>open box</h2>
+           </div>
+        </div>
+        <div class="row">
+           <div class="col-md-2"></div>
+           <div class="col-md-6">
+             <h2>close</h2>
+           </div>
+        </div>
+        <div class="row">
+           <div class="col-md-2"></div>
+           <div class="col-md-6">
+             <h2>play [what you want]</h2>
+           </div>
+        </div>
+        <div class="row">
+           <div class="col-md-2"></div>
+           <div class="col-md-6">
+             <h2>go home</h2>
+           </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-6">
+            <h2>go down</h2>
+          </div>
+        </div>
+      </div>
+    <div class="container">
+      <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+    </div>
+
+    <div class="jumbotron invisible"></div>
+    <div class="jumbotron invisible"></div>
+    <div class="item"></div>
+    <div class="container">
+      <div class="row">
+         <div class="col-md-6 col-md-offset-3">
+            <form action="#" class="invisible" id="form">
+              <p><input type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control" /></p>
+              <p><input id="submit" type="submit" value="Search" class="form-control btn btn-primary w100 hidden"></p>
+            </form>
+            <div id="results"></div>
+          </div>
+      </div>
+    </div>
+    <div class="jumbotron invisible"></div>
+    <div class="jumbotron invisible"></div>
+    <div class="jumbotron invisible"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../custom.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+  </body>
+</html>
